@@ -78,15 +78,28 @@ public class HandlerTest {
     @Test
     @Order(1)
     public void whenInitializingAWSS3Service_thenNotNull() {
+        System.out.println("<<Test Init S3 start>>");
         assertNotNull(s3);
-        System.out.println("Test 1 passed");
+        System.out.println("<<Test Init S3 passed>>");
+        System.out.println();
+    }
+
+    @Test
+    @Order(3)
+    public void deleteBucket() {
+        System.out.println("<<Test deleteBucket start>>");
+        Handler.deleteBucket(s3, bucketName);
+        System.out.println("<<Test deleteBucket passed>>");
+        System.out.println();
     }
 
     @Test
     @Order(2)
     public void createBucket() {
+        System.out.println("<<Test createBucket start>>");
         Handler.createBucket(s3, bucketName);
-        System.out.println("Test 2 passed");
+        System.out.println("<<Test createBucket passed>>");
+        System.out.println();
     }
 
 }
