@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.HandlerTest" time="4.042" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.VerifyEmailTest" time="0.006" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -56,29 +56,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="whenInitializingAWSS3Service_thenNotNull" classname="org.example.HandlerTest" time="0.025">
-    <system-out><![CDATA[<<Test Init S3 start>>
-<<Test Init S3 passed>>
-
-]]></system-out>
-  </testcase>
-  <testcase name="createBucket" classname="org.example.HandlerTest" time="2.458">
-    <system-out><![CDATA[<<Test createBucket start>>
-Creating bucket: bucket1685376732731
-bucket1685376732731 is ready.
-
-<<Test createBucket passed>>
-
-]]></system-out>
-  </testcase>
-  <testcase name="deleteBucket" classname="org.example.HandlerTest" time="0.466">
-    <system-out><![CDATA[<<Test deleteBucket start>>
-Bucket bucket1685376732731 has been deleted.
-Connection closed
-Exiting...
-
-<<Test deleteBucket passed>>
-
-]]></system-out>
-  </testcase>
+  <testcase name="testVerifyEmail" classname="org.example.VerifyEmailTest" time="0.004"/>
 </testsuite>

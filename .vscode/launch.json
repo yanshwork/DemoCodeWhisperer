@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "VerifyEmail",
+            "request": "launch",
+            "mainClass": "org.example.VerifyEmail",
+            "projectName": "getstarted"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

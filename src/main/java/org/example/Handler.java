@@ -74,21 +74,25 @@ public class Handler {
     // delete bucket
     public static void deleteBucket(S3Client s3Client, String bucketName) {
         try {
-            System.out.println("Deleting bucket: " + bucketName);
-            DeleteBucketRequest deleteBucketRequest = DeleteBucketRequest.builder().bucket(bucketName).build();
-            s3Client.deleteBucket(deleteBucketRequest);
-            System.out.println(bucketName + " has been deleted.");
-            System.out.printf("%n");
-            System.out.println("Closing the connection to {S3}");
+            s3Client.deleteBucket(DeleteBucketRequest.builder()
+                    .bucket(bucketName)
+                    .build());
+            s3Client.waiter().waitUntilBucketNotExists(HeadBucketRequest.builder()
+                    .bucket(bucketName)
+                    .build());
+            System.out.println("Bucket " + bucketName + " has been deleted.");
+
+            // close the connection
             s3Client.close();
             System.out.println("Connection closed");
             System.out.println("Exiting...");
 
+            System.out.printf("%n");
         } catch (S3Exception e) {
             System.err.println(e.awsErrorDetails().errorMessage());
             System.exit(1);
-
         }
+
     }
 
 }

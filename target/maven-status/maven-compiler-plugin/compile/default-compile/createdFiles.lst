@@ -1,4 +1,5 @@
-org/example/verify_email.class
 org/example/Handler.class
+org/example/Folder.class
+org/example/VerifyEmail.class
 org/example/DependencyFactory.class
 org/example/App.class

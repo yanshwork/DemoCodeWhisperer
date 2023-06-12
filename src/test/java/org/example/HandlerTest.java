@@ -61,7 +61,9 @@ public class HandlerTest {
             Properties prop = new Properties();
 
             if (input == null) {
-                System.out.println("Sorry, unable to find config.properties");
+                // yan
+                // System.out.println("Sorry, unable to find config.properties");
+                // yan
                 return;
             }
             prop.load(input);
@@ -85,20 +87,21 @@ public class HandlerTest {
     }
 
     @Test
-    @Order(3)
-    public void deleteBucket() {
-        System.out.println("<<Test deleteBucket start>>");
-        Handler.deleteBucket(s3, bucketName);
-        System.out.println("<<Test deleteBucket passed>>");
-        System.out.println();
-    }
-
-    @Test
     @Order(2)
     public void createBucket() {
         System.out.println("<<Test createBucket start>>");
         Handler.createBucket(s3, bucketName);
         System.out.println("<<Test createBucket passed>>");
+        System.out.println();
+    }
+
+    // create test to test delete bucket
+    @Test
+    @Order(3)
+    public void deleteBucket() {
+        System.out.println("<<Test deleteBucket start>>");
+        Handler.deleteBucket(s3, bucketName);
+        System.out.println("<<Test deleteBucket passed>>");
         System.out.println();
     }
 
