@@ -1,8 +1,8 @@
 const actors = [
 { name: "David", lastName: "Bowie" },
 { name: "John", lastName: "Lennon" },
-{ name: "Paul", lastName: "McCartney" },
-{ name: "Ringo", lastName: "Starr" }
+{ name: "Paul", lastName: "McCartney" }
+
 ];
 
 
