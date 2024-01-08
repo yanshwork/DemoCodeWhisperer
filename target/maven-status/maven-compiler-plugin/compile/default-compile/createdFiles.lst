@@ -1,5 +1,7 @@
-org/example/Handler.class
+org/.DS_Store
 org/example/Folder.class
-org/example/VerifyEmail.class
 org/example/DependencyFactory.class
 org/example/App.class
+.DS_Store
+org/example/Handler.class
+org/example/VerifyEmail.class
