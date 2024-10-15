@@ -18,3 +18,4 @@ def connect_to_db_vulnerable():
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM Users;")
     connection.close()
+    #test
